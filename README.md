@@ -47,5 +47,10 @@ to install zip in ubuntu
 ```
 sudo apt install zip
 ```
+- to use scp command u need to copy the public key (id_rsa.pub) to the authorized_keys file of remote server.
+- if u dont have existing ssh keypairs then u can generate by using command
+```
+ssh-keygen
+```
 - next ,
 - run the pipeline if got any errors resolve those errors once build got suceess check the application-server ip in browser to check whether default index.html page of apache server replaced with index.html page which u created.
