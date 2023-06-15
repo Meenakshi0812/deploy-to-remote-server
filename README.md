@@ -1,4 +1,4 @@
-# deploy-to-remote-server
+### deploy-to-remote-server
 ## problem statement
 - needs to clone the the code in /home/ec2-user/
 - and the folder name should be the $build_number
@@ -38,3 +38,14 @@ sudo apt install apache2
 sudo systemctl status apache2
 ```
 - once installed copy the ip adrdress of application server and check whetehr apache running or not.
+- if u got error like zip not installed like that install zip.
+- to install zip in linux use command
+```
+sudo yum install zip
+```
+to install zip in ubuntu
+```
+sudo apt install zip
+```
+- next ,
+- run the pipeline if got any errors resolve those errors once build got suceess check the application-server ip in browser to check whether default index.html page of apache server replaced with index.html page which u created.
