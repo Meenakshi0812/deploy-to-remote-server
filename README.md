@@ -1,5 +1,5 @@
 # deploy-to-remote-server
-## problem statements
+## problem statement
 - needs to clone the the code in /home/ec2-user/
 - and the folder name should be the $build_number
 - then we need to zip the all the files
@@ -8,7 +8,7 @@
 - then create the soft link for the updated code with the zipped code
 - next expose the application through internet.
 - make process as automate whenever new commit triggers buids need to trigger automatically
-## solutions
+## solution
 - create servers (take any os of ur choice whether linux/ubuntu) .
 - name the first server as jenkins-server and install jenkins in it
 - name second server as application-server and install apache2 in it
@@ -29,3 +29,12 @@ sudo systemctl enable jenkins
 sudo systemctl start jenkins
 sudo systemctl status jenkins
 ```
+- note: dont forgot to enable port 8080 in security groups.
+- once installed open the jenkins in browser ip:8080
+## steps to install apache2
+```
+sudo apt update
+sudo apt install apache2
+sudo systemctl status apache2
+```
+- once installed copy the ip adrdress of application server and check whetehr apache running or not.
