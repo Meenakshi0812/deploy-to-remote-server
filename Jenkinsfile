@@ -7,7 +7,7 @@ pipeline {
                 script {
                     def clonePath = "/home/ubuntu/build_${env.BUILD_NUMBER}"
                     dir(clonePath) {
-                        git branch: 'main', url: 'https://github.com/Meenakshi0812/https://github.com/Meenakshi0812/deploy-to-remote-server.git'
+                        git branch: 'main', url: 'https://github.com/Meenakshi0812/deploy-to-remote-server.git'
                     }
                 }
             }
