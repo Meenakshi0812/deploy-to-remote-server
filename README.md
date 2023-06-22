@@ -1,7 +1,8 @@
 ### deploy-to-remote-server
+####  Automated Jenkins Code Cloning, Zipping, Deployment, and Exposing through Internet
 ## problem statement
 - needs to clone the the code in /home/ec2-user/
-- and the folder name should be the $build_number
+- and the folder name should be the unique(example: $build_number)
 - then we need to zip the all the files
 - copy the zip folder to remote server(i.e application-server) in the application folder path i.e /var/www/html
 - then unzip the folder in /var/www/html/
