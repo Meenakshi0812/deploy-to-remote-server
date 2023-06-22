@@ -28,7 +28,7 @@ pipeline {
                 script {
                     def zipFileName = "build_${env.BUILD_NUMBER}.zip"
                     def destinationPath = "/var/www/html/"
-                    sh "scp -o StrictHostKeyChecking=no /home/ec2-user/${zipFileName} ubuntu@43.204.229.126:${destinationPath}"
+                    sh "scp -o StrictHostKeyChecking=no /home/ec2-user/${zipFileName} ubuntu@52.204.172.168:${destinationPath}"
                 }
             }
         }
@@ -40,8 +40,8 @@ pipeline {
                     def zipFileName = "${folderName}.zip"
                     def destinationPath = "/var/www/html/"
 
-                    sh "ssh -o StrictHostKeyChecking=no ubuntu@43.204.229.126 'unzip -o ${destinationPath}${zipFileName} -d ${destinationPath}'"
-                    sh "ssh -o StrictHostKeyChecking=no ubuntu@35.173.124.74 'ln -sfn ${destinationPath}${folderName} ${destinationPath}code'"
+                    sh "ssh -o StrictHostKeyChecking=no ubuntu@52.204.172.168 'unzip -o ${destinationPath}${zipFileName} -d ${destinationPath}'"
+                    sh "ssh -o StrictHostKeyChecking=no ubuntu@52.204.172.168 'ln -sfn ${destinationPath}${folderName} ${destinationPath}code'"
                 }
             }
         }
